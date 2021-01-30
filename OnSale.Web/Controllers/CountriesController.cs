@@ -47,7 +47,7 @@ namespace OnSale.Web.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name")] Country country)
+        public async Task<IActionResult> Create(Country country)
         {
             if (ModelState.IsValid)
             {
@@ -75,7 +75,7 @@ namespace OnSale.Web.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name")] Country country)
+        public async Task<IActionResult> Edit(int id, Country country)
         {
             if (id != country.Id)
             {
@@ -119,20 +119,10 @@ namespace OnSale.Web.Controllers
             {
                 return NotFound();
             }
-
-            return View(country);
-        }
-
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            var country = await _context.Countries.FindAsync(id);
             _context.Countries.Remove(country);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
-
         private bool CountryExists(int id)
         {
             return _context.Countries.Any(e => e.Id == id);
