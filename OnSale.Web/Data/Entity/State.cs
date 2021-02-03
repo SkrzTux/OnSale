@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace OnSale.Web.Data.Entity
 {
-    public class Country : State
+    public class State : City
     {
-        public int Id { get; set; }
+        public int IdSt { get; set; }
 
         [MaxLength(50)]
         [Required]
-        public string Name { get; set; }
+        public string NameSt { get; set; }
     }
 }
