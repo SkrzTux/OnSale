@@ -72,7 +72,6 @@ namespace OnSale.Web.Controllers
                 {
                     ModelState.AddModelError(string.Empty, exception.Message);
                 }
-
             }
             return View(country);
         }   

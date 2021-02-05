@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OnSale.Web.Data.Entity
 {
-    public class State : City
+    public class State
     {
         public int IdSt { get; set; }
 

@@ -24,6 +24,8 @@ namespace OnSale.Web.Data
                 .HasIndex(t => t.Name)
                 .IsUnique();
         }
+
+
     }
 }
 
