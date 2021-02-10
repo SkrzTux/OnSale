@@ -9,10 +9,10 @@ namespace OnSale.Web.Data.Entity
 {
     public class State
     {
-        public int IdSt { get; set; }
+        public int Id { get; set; }
 
         [MaxLength(50)]
         [Required]
-        public string NameSt { get; set; }
+        public string Name { get; set; }
     }
 }

@@ -12,11 +12,11 @@ namespace OnSale.Web.Data.Entity
         [Required]
         public string Name { get; set; }
 
-        /*
+        
         public ICollection<City> Cities { get; set; }
 
         [DisplayName("Cities Number")]
         public int CitiesNumber => Cities == null ? 0 : Cities.Count;
-        */
+        
     }
 }

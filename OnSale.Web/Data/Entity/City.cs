@@ -15,11 +15,10 @@ namespace OnSale.Web.Data.Entity
         [Required]
         public string Name { get; set; }
 
-        /*
         public ICollection<Neighborhood> Neighborhoods { get; set; }
         [DisplayName("Neighborhoods Number")]
         public int NeighborhoodsNumber => Neighborhoods == null ? 0 : Neighborhoods.Count;
-        */
+        
     }
 }
 

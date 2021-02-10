@@ -8,10 +8,10 @@ namespace OnSale.Web.Data.Entity
 {
     public class Neighborhood
     {
-        public int IdNbh { get; set; }
+        public int Id { get; set; }
 
         [MaxLength(40)]
         [Required]
-        public string NameNbh { get; set; }
+        public string Name { get; set; }
     }
 }

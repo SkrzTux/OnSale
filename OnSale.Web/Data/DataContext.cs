@@ -37,6 +37,10 @@ namespace OnSale.Web.Data
             .IsUnique();
         }
 
+        public DbSet<OnSale.Web.Data.Entity.Neighborhood> Neighborhood { get; set; }
+
+        public DbSet<OnSale.Web.Data.Entity.State> State { get; set; }
+
     }
 }
 

@@ -15,7 +15,6 @@ namespace OnSale.Web.Data.Entity
         [Required]
         public string Name { get; set; }
 
-        /*
         public ICollection<State> States { get; set; }
         [DisplayName("States Number")]
         public int stateNumber => States == null ? 0 : States.Count;
@@ -23,6 +22,6 @@ namespace OnSale.Web.Data.Entity
         public ICollection<Department> Departments { get; set; }
         [DisplayName("Departments Number")] 
         public int DepartmentsNumber => Departments == null ? 0 : Departments.Count;
-        */
+        
     }
 }
