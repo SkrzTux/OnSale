@@ -14,11 +14,10 @@ namespace OnSale.Web.Data.Entity
         [MaxLength(50)]
         [Required]
         public string Name { get; set; }
-
         public ICollection<Department> Departments { get; set; }
 
         [DisplayName("Departments Number")]
-        public int DepartmentsNumber => Department != null ? Department.Count : 0;
+        public int DepartmentsNumber => Departments == null ? 0 : Departments.Count;
 
     }
 }

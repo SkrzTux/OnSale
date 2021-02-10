@@ -16,6 +16,5 @@ namespace OnSale.Web.Data.Entity
 
         [DisplayName("Cities Number")]
         public int CitiesNumber => Cities == null ? 0 : Cities.Count;
-
     }
 }
