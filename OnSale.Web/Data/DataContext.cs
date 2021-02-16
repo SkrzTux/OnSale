@@ -14,6 +14,10 @@ namespace OnSale.Web.Data
         {
         }
 
+        public DbSet<Neighborhood> Neighborhoods { get; set; }
+
+        public DbSet<State> States { get; set; }
+
         public DbSet<City> Cities { get; set; }
 
         public DbSet<Country> Countries { get; set; }
@@ -33,6 +37,14 @@ namespace OnSale.Web.Data
                 .IsUnique();
 
             modelBuilder.Entity<Department>()
+            .HasIndex(t => t.Name)
+            .IsUnique();
+
+            modelBuilder.Entity<Neighborhood>()
+            .HasIndex(t => t.Name)
+            .IsUnique();
+
+            modelBuilder.Entity<State>()
             .HasIndex(t => t.Name)
             .IsUnique();
         }

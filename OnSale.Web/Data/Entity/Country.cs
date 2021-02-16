@@ -9,19 +9,23 @@ namespace OnSale.Web.Data.Entity
 {
     public class Country
     {
-        public int Id { get; set; }
+        public int CountryID { get; set; }
 
+        [DisplayName("Codigo Pais")]
         [MaxLength(50)]
-        [Required]
-        public string Name { get; set; }
+        [Required(ErrorMessage = "El campo {0} es Requerido")]
+        [Range(1, int.MaxValue, ErrorMessage = "Por favor digire un numero valido")]
+        public int CountryCode { get; set; }
 
         public ICollection<State> States { get; set; }
         [DisplayName("States Number")]
-        public int stateNumber => States == null ? 0 : States.Count;
+        public int StateNumber => States == null ? 0 : States.Count;
 
         public ICollection<Department> Departments { get; set; }
         [DisplayName("Departments Number")] 
         public int DepartmentsNumber => Departments == null ? 0 : Departments.Count;
+
+
         
     }
 }
