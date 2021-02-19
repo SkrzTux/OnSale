@@ -4,29 +4,25 @@ using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
+using Xunit;
 
 namespace OnSale.Web.Data.Entity
 {
-    public class Seller
+    public class Currency
     {
-        public int SellerID { get; set; }
+        public int CurrencyID { get; set; }
 
-        [DisplayName("Codigo Vendedor")]
+        [DisplayName("Codigo Divisa")]
         [MaxLength(50)]
         [Range(0, int.MaxValue, ErrorMessage = "Favor Digite un Numero Entero Valido")]
         [Required]
-        public int SellerCode { get; set; }
+        public int CurrencyCode { get; set; }
 
-        [DisplayName("Nombre Vendedor")]
+        [DisplayName("Nombre Divisa")]
         [MaxLength(50)]
         [StringLength(50, ErrorMessage = "Debe tener entre {2} y {1} Caracteres", MinimumLength = 3)]
         [Required(ErrorMessage = "El Campo {0} es Requerido")]
-        public string SellerName { get; set; }
+        public string CurrencyName { get; set; }
 
-        [DisplayName("Categoria Vendedor")]
-        [MaxLength(50)]
-        [StringLength(50, ErrorMessage = "Debe tener entre {2} y {1} Caracteres", MinimumLength = 3)]
-        [Required(ErrorMessage = "El Campo {0} es Requerido")]
-        public string SellerCategory { get; set; }
     }
 }

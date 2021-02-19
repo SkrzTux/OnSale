@@ -7,26 +7,27 @@ using System.Threading.Tasks;
 
 namespace OnSale.Web.Data.Entity
 {
-    public class Way_to_pay
+    public class Supplier
     {
-        public int WaytoPayID { get; set; }
+        public int SupplierID { get; set; }
 
-        [DisplayName("Codigo Metodo de Pago")]
+        [DisplayName("Codigo Suplidor")]
         [MaxLength(50)]
         [Range(0, int.MaxValue, ErrorMessage = "Favor Digite un Numero Entero Valido")]
         [Required]
-        public int WaytoPayCode { get; set; }
+        public int SupplierCode { get; set; }
 
-        [DisplayName("Nombre Metodo de Pago")]
+        [DisplayName("Nombre Suplidor")]
         [MaxLength(50)]
         [StringLength(50, ErrorMessage = "Debe tener entre {2} y {1} Caracteres", MinimumLength = 3)]
         [Required(ErrorMessage = "El Campo {0} es Requerido")]
-        public string WaytoPayName { get; set; }
+        public string SupplierName { get; set; }
 
-        [DisplayName("Categoria Metodo de Pago")]
+        [DisplayName("Categoria Suplidor")]
         [MaxLength(50)]
         [StringLength(50, ErrorMessage = "Debe tener entre {2} y {1} Caracteres", MinimumLength = 3)]
         [Required(ErrorMessage = "El Campo {0} es Requerido")]
-        public string WaytoPayCategory { get; set; }
+        public string SupplierCategory { get; set; }
+
     }
 }

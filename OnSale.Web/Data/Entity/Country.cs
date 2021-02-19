@@ -9,6 +9,8 @@ namespace OnSale.Web.Data.Entity
 {
     public class Country
     {
+        [Key]
+
         public int CountryID { get; set; }
 
         [DisplayName("Codigo Pais")]
@@ -17,13 +19,32 @@ namespace OnSale.Web.Data.Entity
         [Range(1, int.MaxValue, ErrorMessage = "Por favor digire un numero valido")]
         public int CountryCode { get; set; }
 
-        public ICollection<State> States { get; set; }
-        [DisplayName("States Number")]
-        public int StateNumber => States == null ? 0 : States.Count;
+        [DisplayName("Nombre Pais")]
+        [StringLength(50, ErrorMessage = "Debe tener entre {2} y {1} Caracteres", MinimumLength = 3)]
+        [Required(ErrorMessage = "El Campo {0} es Requerido")]
+        public string CountryName { get; set; }
 
+
+        public virtual ICollection<City> Cities { get; set; }
+
+
+        [DisplayName("Moneda")]
+        public int CurrencyID { get; set; }
+        public virtual Currency Currency { get; set; }
+        public virtual ICollection<Currency> Currencies { get; set; }
+
+
+        [DisplayName("States Number")]
+        public ICollection<State> States { get; set; }
+
+
+
+        [DisplayName("Departments Number")]
         public ICollection<Department> Departments { get; set; }
-        [DisplayName("Departments Number")] 
         public int DepartmentsNumber => Departments == null ? 0 : Departments.Count;
+
+
+
 
 
         
