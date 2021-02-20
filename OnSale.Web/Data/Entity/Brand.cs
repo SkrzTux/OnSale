@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace OnSale.Web.Data.Entity
 {
-    public class Mark
+    public class Brand
     {
     }
 }

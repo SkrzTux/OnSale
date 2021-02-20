@@ -25,12 +25,13 @@ namespace OnSale.Web.Data.Entity
         public string CountryName { get; set; }
 
 
-        public virtual ICollection<City> Cities { get; set; }
+        //public virtual ICollection<City> Cities { get; set; }
 
-
+        /*
         [DisplayName("Moneda")]
         public int CurrencyID { get; set; }
         public virtual Currency Currency { get; set; }
+        */
         public virtual ICollection<Currency> Currencies { get; set; }
 
 
@@ -38,11 +39,11 @@ namespace OnSale.Web.Data.Entity
         public ICollection<State> States { get; set; }
 
 
-
+        
         [DisplayName("Departments Number")]
         public ICollection<Department> Departments { get; set; }
         public int DepartmentsNumber => Departments == null ? 0 : Departments.Count;
-
+        
 
 
 

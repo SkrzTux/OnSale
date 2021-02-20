@@ -29,6 +29,7 @@ namespace OnSale.Web.Data.Entity
         [Required]
         public int ArticlePrice { get; set; }
 
+
         [DisplayName("Marca Articulo")]
         [MaxLength(60)]
         [StringLength(50, ErrorMessage = "Debe tener entre {2} y {1} Caracteres", MinimumLength = 3)]
@@ -40,5 +41,10 @@ namespace OnSale.Web.Data.Entity
         [StringLength(50, ErrorMessage = "Debe tener entre {2} y {1} Caracteres", MinimumLength = 3)]
         [Required(ErrorMessage = "El Campo {0} es Requerido")]
         public string ArticleCuality { get; set; }
+
+
+        [DataType(DataType.Date)]
+        public DateTime ArticleEntryDate { get; set; }
+
     }
 }

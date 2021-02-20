@@ -29,11 +29,11 @@ namespace OnSale.Web.Data
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.Entity<City>()
-                .HasIndex(t => t.Name)
+                .HasIndex(t => t.CityName)
                 .IsUnique();
 
             modelBuilder.Entity<Country>()
-                .HasIndex(t => t.Name)
+                .HasIndex(t => t.CountryName)
                 .IsUnique();
 
             modelBuilder.Entity<Department>()
