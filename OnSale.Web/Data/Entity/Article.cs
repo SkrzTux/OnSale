@@ -2,13 +2,16 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace OnSale.Web.Data.Entity
 {
+    [Table("Table Articulo")]
     public class Article
     {
+        [Key]
         public int ArticleID { get; set; }
 
         [DisplayName("Codigo Articulo")]
@@ -45,6 +48,8 @@ namespace OnSale.Web.Data.Entity
 
         [DataType(DataType.Date)]
         public DateTime ArticleEntryDate { get; set; }
+
+        public ICollection<Brand> Brands { get; set; }
 
     }
 }
